@@ -34,7 +34,8 @@ nav ul {
 }
 
 nav ul li {
-    padding: 20px;
+    padding: 1rem;
+    
 }
 
 .container {
@@ -47,16 +48,18 @@ nav ul li {
     background-image: url(background.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 1rem;
 
 }
 
 .bottom {
     position: sticky;
-    height: 60px;
-    background-color: black;
+    height: 70px;
+    background-color: rgb(226, 36, 52);
     color: white;
     bottom: 0;
     display: flex;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
 
@@ -65,27 +68,70 @@ nav ul li {
 
 .icons {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     font-size: 24px;
 }
 
 
 .icons i {
     cursor: pointer;
+    margin-right: 0.2rempx;
+    margin-top: 0.3rem;
+    margin-left: 0.2rem ;
 }
 
 #Bar {
     width: 70vw;
+    cursor: pointer;
 }
-.songItem
-{
-    height: 50px;
+
+.songItem {
+    height: 4rem;
     display: flex;
     justify-content: space-around;
-    background-color: rgb(6, 6, 6);
-    width:40%;
+    text-align: center;
+    background-color: rgb(31, 25, 25);
     margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-top: 0.5rem;
+    border-radius: 1rem;
 }
-.songItem span{
+
+.songItem span {
     margin: 1rem;
+    border-radius: 24px;
+}
+
+.timestamp {
+    margin: 0 23px;
+}
+
+.timestamp i {
+    cursor: pointer;
+}
+
+.songItemcontainer {
+    margin-top: 30px;
+    
+}
+.songinfo {
+    position: absolute;
+    left: 14vw;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-align: center; 
+    margin-top: 1.5rem;
+  }
+  
+  .songinfo img {
+    margin-right: 1rem; 
+    opacity: 0;
+    transition: opacity 1s ease;
+
+  }
+  
+.songItem img{
+    margin-left: 10px;
+    margin-bottom: 6px;
 }
