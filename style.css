@@ -17,13 +17,13 @@ nav ul {
     display: flex;
     align-items: center;
     list-style-type: none;
-    height: 60px;
+    height: 6rem;
     background-color: black;
     color: white;
 }
 
 .brand img {
-    width: 42px;
+    width: 4rem;
 }
 
 .brand {
@@ -39,22 +39,28 @@ nav ul li {
 }
 
 .container {
-    min-height: 72vh;
+    min-height: 74vh;
     background-color: black;
     color: white;
     display: flex;
-    margin: 23px auto;
-    width: 70%;
+    margin: 2rem auto;
+    width: fit-content;
     background-image: url(background.jpeg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     border-radius: 1rem;
 
+}
+.container h1
+{
+    position: relative;
+    left: 42rem;
+    margin-top: 1rem;
 }
 
 .bottom {
     position: sticky;
-    height: 70px;
+    height: 5rem;
     background-color: rgb(226, 36, 52);
     color: white;
     bottom: 0;
@@ -62,20 +68,18 @@ nav ul li {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
-
 }
 
 .icons {
     display: flex;
     justify-content: center;
-    font-size: 24px;
+    font-size: 2rem;
 }
 
 
 .icons i {
     cursor: pointer;
-    margin-right: 0.2rempx;
+    margin-right: 0.2rem;
     margin-top: 0.3rem;
     margin-left: 0.2rem ;
 }
@@ -95,15 +99,17 @@ nav ul li {
     margin-bottom: 2rem;
     padding-top: 0.5rem;
     border-radius: 1rem;
+    margin-left: 25rem;
+
 }
 
 .songItem span {
     margin: 1rem;
-    border-radius: 24px;
+    border-radius: 2rem;
 }
 
 .timestamp {
-    margin: 0 23px;
+    margin: 0 2rem;
 }
 
 .timestamp i {
@@ -111,7 +117,8 @@ nav ul li {
 }
 
 .songItemcontainer {
-    margin-top: 30px;
+    margin-top: 2rem;
+    margin-right: 4rem;
     
 }
 .songinfo {
@@ -132,6 +139,11 @@ nav ul li {
   }
   
 .songItem img{
-    margin-left: 10px;
-    margin-bottom: 6px;
+    margin-left: 3rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.2rem;
+}
+.songItemPlay
+{
+    margin-left:2rem;
 }

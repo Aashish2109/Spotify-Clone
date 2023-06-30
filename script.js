@@ -1,10 +1,16 @@
 
 let songIndex = 0;//This line initializes a variable songIndex with the value 0. It represents the index of the currently selected song in the songs array.
+
 let audio = new Audio('song1.mp3');//This line creates a new Audio object and assigns it to the variable audio. The constructor takes the path to the first song file (song1.mp3) as an argument.
+
 let MasterPlay = document.getElementById("MasterPlay");// represents the play/pause button
+
 let myProgressBar = document.getElementById("Bar");//represents the progress bar
+
 let gif = document.getElementById("gif");//represents the GIF element.
+
 let songItems = Array.from(document.getElementsByClassName('songItem'));//This line selects all elements with the class name 'songItem' and converts the resulting NodeList into an array using Array.from(). The songItems array will contain the individual song items displayed in the UI.
+
 let songs = [//This line initializes an array songs that contains objects representing each song. Each song object has properties such as songName, filePath, coverPath, and gifPath, representing the name, file path, cover image path, and GIF path for each song.
     { songName: "Falak-Tu-Garaj-Tu", filePath: "song1.mp3", coverPath: "song1.jpeg", gifPath: "playsong.jpeg" },
     { songName: "Salam-e-Ishq", filePath: "song2.mp3", coverPath: "song2.jpeg", gifPath: "playsong.jpeg" },
@@ -18,7 +24,7 @@ let songs = [//This line initializes an array songs that contains objects repres
 
 MasterPlay.addEventListener('click', () => {
     if (audio.paused || audio.currentTime <= 0) {
-        audio.play();                                           //This code block sets up an event listener for the click event on the MasterPlay button. When clicked, it plays or pauses the audio, toggles the play/pause button's icon, and adjusts the visibility of the GIF element.
+        audio.play();    //This code block sets up an event listener for the click event on the MasterPlay button. When clicked, it plays or pauses the audio, toggles the play/pause button's icon, and adjusts the visibility of the GIF element.
         MasterPlay.classList.remove('fa-solid', 'fa-play');
         MasterPlay.classList.add('fa-solid', 'fa-pause');
         gif.style.opacity = 1;
