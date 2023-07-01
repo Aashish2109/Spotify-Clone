@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: rgb(213, 200, 182);
+    background-color: rgb(182, 199, 213);
 }
 
 nav {
@@ -35,7 +35,7 @@ nav ul {
 
 nav ul li {
     padding: 1rem;
-    
+
 }
 
 .container {
@@ -51,8 +51,8 @@ nav ul li {
     border-radius: 1rem;
 
 }
-.container h1
-{
+
+.container h1 {
     position: relative;
     left: 42rem;
     margin-top: 1rem;
@@ -81,7 +81,7 @@ nav ul li {
     cursor: pointer;
     margin-right: 0.2rem;
     margin-top: 0.3rem;
-    margin-left: 0.2rem ;
+    margin-left: 0.2rem;
 }
 
 #Bar {
@@ -119,31 +119,34 @@ nav ul li {
 .songItemcontainer {
     margin-top: 2rem;
     margin-right: 4rem;
-    
+
 }
+
 .songinfo {
     position: absolute;
     left: 14vw;
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
-    text-align: center; 
+    text-align: center;
     margin-top: 1.5rem;
-  }
-  
-  .songinfo img {
-    margin-right: 1rem; 
+}
+
+.songinfo img {
+    margin-right: 1rem;
     opacity: 0;
     transition: opacity 1s ease;
 
-  }
-  
-.songItem img{
+}
+
+.songItem img {
     margin-left: 3rem;
     margin-bottom: 0.5rem;
     margin-top: 0.2rem;
+    width: 6rem;
+
 }
-.songItemPlay
-{
-    margin-left:2rem;
+
+.songItemPlay {
+    margin-left: 2rem;
 }

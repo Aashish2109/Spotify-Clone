@@ -39,7 +39,17 @@ MasterPlay.addEventListener('click', () => {
 audio.addEventListener('timeupdate', () => {
     let progress = parseInt((audio.currentTime / audio.duration) * 100);                //This code block sets up an event listener for the timeupdate event on the audio element. It calculates the current progress of the song and updates the value of the progress bar accordingly.
     myProgressBar.value = progress;
+    let currentTimeElement = document.getElementById('currentTime');   //Update the current time display
+    let currentTime = formatTime(audio.currentTime);
+    currentTimeElement.textContent = currentTime;
 });
+function formatTime(time) {
+    let minutes = Math.floor(time / 60);
+    let seconds = Math.floor(time % 60);
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    return minutes + ":" + seconds;
+}
 
 myProgressBar.addEventListener('change', () => {
     audio.currentTime = myProgressBar.value * audio.duration / 100;//This code block sets up an event listener for the change event on the myProgressBar element. It updates the current playback position of the audio based on the value of the progress ba
@@ -100,18 +110,23 @@ songItemPlayButtons.forEach((button, index) => {//This code block sets up event 
 const forwardButton = document.querySelector('.fa-forward');
 const backwardButton = document.querySelector('.fa-backward');
 
-forwardButton.addEventListener('click', () => {
+forwardButton.addEventListener('click', (event) => {
     songIndex = (songIndex + 1) % songs.length;
     playSelectedSong();
+    event.stopPropagation();
 });
 
-backwardButton.addEventListener('click', () => {
+backwardButton.addEventListener('click', (event) => {
     songIndex = (songIndex - 1 + songs.length) % songs.length;
     playSelectedSong();
+    event.stopPropagation();
 });
 
 function playSelectedSong() {
     MakeAllPlays();
+    const currentPlayButton = songItemPlayButtons[songIndex];
+    currentPlayButton.classList.remove('fa-play');
+    currentPlayButton.classList.add('fa-pause');
     audio.src = songs[songIndex].filePath;
     audio.currentTime = 0;
     audio.play();
