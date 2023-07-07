@@ -6,4 +6,4 @@ This is the clone of music streaming platform.
 
 The link to the application is :
 
-https://subtle-tiramisu-623848.netlify.app
+[https://subtle-tiramisu-623848.netlify.app](https://music-streamingaashishgupta.netlify.app)https://music-streamingaashishgupta.netlify.app
